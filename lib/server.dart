@@ -14,7 +14,7 @@ class Server {
     ]);
     app.post('/users/login', UsersRoute.login);
     app.post('/users/createAccount', UsersRoute.createAccount);
-
+    app.get('/status', (req, res) => 'Server Online');
 
 
     await app.listen(port);
